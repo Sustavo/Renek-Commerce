@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { api } from '@/services.js'
+
 export default {
     nome: "ProdutosLista",
     data() {
@@ -19,10 +21,9 @@ export default {
     },
     methods: {
         getProdutos() {
-            fetch("http://localhost:3000/produto")
-            .then(response => response.json())
+            api.get("/produto")
             .then(response => {
-                this.produtos = response;
+                this.produtos = response.data
             })
         }
     },
