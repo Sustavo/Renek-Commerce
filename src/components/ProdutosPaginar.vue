@@ -37,6 +37,24 @@ export default {
 </script>
 
 <style scoped>
+ul {
+    grid-column: 1 / -1;
+}
 
+li {
+    display: inline-block
+}
+
+li a {
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin: 4px;
+}
+
+li a.router-link-exact-active,
+li a:hover {
+    background: #87f;
+    color: white;
+}
 
 </style>
