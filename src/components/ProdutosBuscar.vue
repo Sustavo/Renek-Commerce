@@ -1,7 +1,7 @@
 <template>
     <section>
         <form action="">
-            <input name="busca" id="busca" type="text" v-model="busca">
+            <input name="busca" id="busca" type="text" v-model="busca" placeholder="Buscar...">
             <input type="submit" id="lupa" value="Buscar" @click.prevent="buscarProdutos">
         </form>
     </section>
@@ -22,6 +22,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+form {
+    max-width: 600px;
+    margin: 30px auto 60px auto;
+    position: relative;
+}
+
+#busca {
+    width: 100%;
+    padding: 20px;
+    border: none;
+}
+
+#busca:focus,
+#busca:hover {
+    transform: scale(1.1);
+
+}
+
 
 </style>
