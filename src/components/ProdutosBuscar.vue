@@ -41,5 +41,16 @@ form {
 
 }
 
-
+#lupa {
+    width: 62px;
+    height: 62px;
+    background: url("../assets/search.svg") no-repeat center center;
+    text-indent: -150px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    box-shadow: none;
+}
 </style>
