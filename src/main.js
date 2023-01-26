@@ -6,7 +6,9 @@ import PaginaCarregando from "@/components/PaginaCarregando.vue"
 
 Vue.config.productionTip = false
 
-Vue.component("PaginaCarregando", PaginaCarregando)
+Vue.component("PaginaCarregando", PaginaCarregando);
+
+
 
 new Vue({
   router,
