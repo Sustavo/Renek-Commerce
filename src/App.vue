@@ -82,6 +82,10 @@ export default {
     flex: 1;
   }
   
+  label {
+    margin-bottom: 5px;
+  }
+
   input, textarea {
     border-radius: 4px;
     border: 1px solid white;
