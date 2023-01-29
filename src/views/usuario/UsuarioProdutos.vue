@@ -44,5 +44,7 @@ export default {
 </script>
 
 <style scoped>
-
+  h2 {
+    margin-bottom: 20px;
+  }
 </style>
