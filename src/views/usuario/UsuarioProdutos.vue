@@ -16,12 +16,16 @@
 <script>
 import ProdutoAdicionar from '@/components/ProdutoAdicionar.vue';
 import ProdutoItem from '@/components/ProdutoItem.vue';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   name: "UsuarioProdutos",
   components: {
     ProdutoAdicionar,
     ProdutoItem
+  },
+  computed: {
+    ...mapState(["login", "usuario", "usuario_produtos"])
   }
 }
 </script>
