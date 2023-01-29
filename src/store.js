@@ -19,7 +19,8 @@ export default new Vuex.Store({
             bairro: "",
             cidade: "",
             estado: ""
-        }
+        },
+        usuario_produtos: null
     },
     mutations: {
         UPDATE_LOGIN(state, payload) {
