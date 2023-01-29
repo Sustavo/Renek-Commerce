@@ -29,6 +29,16 @@ export default {
   },
   methods: {
     ...mapActions(["getUsuarioProdutos"])
+  },
+  watch: {
+    login() {
+      this.getUsuarioProdutos();
+    }
+  },
+  created() {
+    if(this.login) {
+      this.getUsuarioProdutos();
+    }
   }
 }
 </script>
