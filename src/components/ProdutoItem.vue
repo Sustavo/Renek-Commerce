@@ -21,5 +21,22 @@ export default {
 </script>
 
 <style scoped>
+ .produto {
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+ }
 
+ .info {
+    align-self: end;
+
+ }
+
+ .produto-img {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100px;
+ }
 </style>
