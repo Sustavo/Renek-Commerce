@@ -20,11 +20,15 @@
 
 <script>
 import { api } from '@/services.js'
+import FinalizarCompra from '@/components/FinalizarCompra.vue'
 
 
 export default {
     name: "ProdutoView",
     props: ["id"],
+    components: {
+      FinalizarCompra
+    },
     data() {
       return {
         produto: null
