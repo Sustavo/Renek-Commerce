@@ -10,6 +10,7 @@
 <script>
 import UsuarioForm from '@/components/UsuarioForm.vue';
 import { api } from "@/services.js"
+import { mapState } from 'vuex';
 
 export default {
     name: "FinalizarCompra",
@@ -18,7 +19,7 @@ export default {
         UsuarioForm
     },
     computed: {
-        
+        ...mapState(["usuario"]),
         
     },
     methods: {
