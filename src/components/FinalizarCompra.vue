@@ -1,0 +1,33 @@
+<template>
+    <section>
+        <h2>Endereço de envio</h2>
+        <UsuarioForm>
+            <button class="btn" @click.prevent="finalizarCompra">Finalizar Compra</button>
+        </UsuarioForm>
+    </section>
+</template>
+
+<script>
+import UsuarioForm from '@/components/UsuarioForm.vue';
+import { api } from "@/services.js"
+
+export default {
+    name: "FinalizarCompra",
+    props: ["produto"],
+    components: {
+        UsuarioForm
+    },
+    computed: {
+        
+        
+    },
+    methods: {
+        
+        
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
