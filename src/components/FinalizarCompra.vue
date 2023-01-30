@@ -37,7 +37,11 @@ export default {
         }
     },
     methods: {
-        
+        criarTransacao() {
+            return api.post("/transacao", this.compra).then(() => {
+                this.$router.push({name: "compras" });
+            })
+        },
         
     }
 }
