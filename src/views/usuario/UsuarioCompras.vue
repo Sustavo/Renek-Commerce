@@ -23,9 +23,31 @@ export default {
   components: {
     ProdutoItem
   },
-
+  data() {
+    return {
+      compras: null
+    }
+  },
   computed: {
     ...mapState(["usuario", "login"])
+  },
+  methods: {
+    getCompras() {
+      api.get(`/transacao?comprador_id=${this.usuario.id}`)
+      .then(response => {
+        this.compras = response.data;
+      })
+    }
+  },
+  watch: {
+    login() {
+      this.getCompras();
+    }
+  }, 
+  created() {
+    if(this.login) {
+      this.getCompras();
+    }
   }
 }
 </script>
