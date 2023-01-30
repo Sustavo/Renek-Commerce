@@ -61,5 +61,27 @@ export default {
 </script>
 
 <style scoped>
+  .produtos-wrapper{
+    margin-bottom: 40px;
+  }
 
+  .vendedor span {
+    color: #e80;
+  }
+
+  .entrega {
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+    grid-gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin: 0px;
+    justify-self: end;
+  }
 </style>
