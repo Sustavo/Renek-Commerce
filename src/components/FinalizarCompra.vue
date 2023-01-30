@@ -53,7 +53,14 @@ export default {
         } catch(error) {
           console.log(error)
         }
-      }
+      },
+        finalizarCompra() {
+            if(this.$store.state.login) {
+                this.criarTransacao();
+            } else {
+                this.criarUsuario();
+            }
+        }
     }
 }
 </script>
