@@ -17,12 +17,16 @@
 <script>
 import ProdutoItem from '@/components/ProdutoItem.vue';
 import { api } from '@/services';
+import { mapState } from 'vuex';
 
 export default {
   components: {
     ProdutoItem
   },
 
+  computed: {
+    ...mapState(["usuario", "login"])
+  }
 }
 </script>
 
