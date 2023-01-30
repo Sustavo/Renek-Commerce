@@ -31,9 +31,31 @@ export default {
   components: {
     ProdutoItem
   },
-  
+  data() {
+    return {
+      vendas: null
+    }
+  },
   computed: {
     ...mapState(["usuario", "login"])
+  },
+  methods: {
+    getVendas() {
+      api.get(`/transacao?vendedor_id=${this.usuario.id}`)
+      .then(response => {
+        this.vendas = response.data;
+      })
+    }
+  },
+  watch: {
+    login() {
+      this.getVendas();
+    }
+  }, 
+  created() {
+    if(this.login) {
+      this.getVendas();
+    }
   }
 }
 </script>
