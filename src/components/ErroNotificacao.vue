@@ -15,5 +15,14 @@ export default {
 }
 </script>
 
-<style scoped>  
+<style scoped>
+    .erro {
+        margin: 20px auto;
+    }
+
+    .erro li {
+        color: #e80;
+        text-align: center;
+    }
+
 </style>
