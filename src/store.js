@@ -55,6 +55,14 @@ export default new Vuex.Store({
             context.commit("UPDATE_USUARIO", { id: payload.email });
             return api.post(`/usuario`, payload);
         },
+        logarUsuario(context, payload) {
+            return api.login({
+                username: payload.email,
+                password: payload.senha
+            }).then(response => {
+                window.localStorage.token = `Bearer ${response.data.token}`
+            })
+        },
         deslogarUsuario(context) {
             context.commit("UPDATE_USUARIO", {
                 id: "",
