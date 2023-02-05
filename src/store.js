@@ -44,8 +44,8 @@ export default new Vuex.Store({
                 }
             )
         },
-        getUsuario(context, payload) {
-            return api.get(`/usuario/${payload}`)
+        getUsuario(context) {
+            return api.get(`/usuario`)
             .then(response => {
                 context.commit("UPDATE_USUARIO", response.data)
                 context.commit("UPDATE_LOGIN", true)
