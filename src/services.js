@@ -31,6 +31,9 @@ export const api = {
     },
     delete(endpoint) {
         return axiosInstance.delete(endpoint);
+    },
+    login(body) {
+        return axios.post("http://localhost:10005/wp-json/jwt-auth/v1/token", body);
     }
 };
 
