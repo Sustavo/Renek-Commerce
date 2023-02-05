@@ -47,7 +47,6 @@ export default {
                 const cep = this.cep.replace(/\D/g, "");
                 if(cep.length === 8) {
                     getCep(cep).then(response => {
-                        console.log(response)
                         this.rua = response.data.logradouro;
                         this.bairro = response.data.bairro;
                         this.cidade = response.data.localidade;
