@@ -49,8 +49,8 @@ export default {
 
       }, 
       adicionarProduto() {
-        this.formatarProduto()
-        api.post("/produto", this.produto).then(() => {
+        const produto = this.formatarProduto()
+        api.post("/produto", produto).then(() => {
           this.$store.dispatch("getUsuarioProdutos")
         })
       }
