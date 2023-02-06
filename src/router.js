@@ -12,7 +12,7 @@ import UsuarioEditar from "./views/usuario/UsuarioEditar.vue"
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: "history",
     base: process.env.BASE_URL,
     routes: [
@@ -35,6 +35,9 @@ export default new Router({
         {
             path: "/usuario",
             component: Usuario,
+            meta: {
+                login: true,
+            },
             children: [
                 {
                     path: "",
@@ -64,3 +67,5 @@ export default new Router({
         return window.scrollTo({top: 0, behavior: "smooth"})
     }
 })
+ 
+export default router;
